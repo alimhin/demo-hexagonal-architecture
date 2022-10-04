@@ -1,10 +1,10 @@
 package com.alimhin.sample.hexagonalarchitecture.domain.service;
 
-import com.alimhin.sample.hexagonalarchitecture.application.port.input.article.ManageArticle;
-import com.alimhin.sample.hexagonalarchitecture.application.port.input.article.ReadArticle;
-import com.alimhin.sample.hexagonalarchitecture.application.port.input.article.WriteArticle;
+import com.alimhin.sample.hexagonalarchitecture.application.port.input.ManageArticle;
+import com.alimhin.sample.hexagonalarchitecture.application.port.input.ReadArticle;
+import com.alimhin.sample.hexagonalarchitecture.application.port.input.WriteArticle;
 import com.alimhin.sample.hexagonalarchitecture.application.port.output.ArticleOutput;
-import com.alimhin.sample.hexagonalarchitecture.application.port.output.NotifyArticleEvent;
+import com.alimhin.sample.hexagonalarchitecture.application.port.output.ArticleNotification;
 import com.alimhin.sample.hexagonalarchitecture.domain.event.CreatedArticleEvent;
 import com.alimhin.sample.hexagonalarchitecture.domain.event.DraftArticleEvent;
 import com.alimhin.sample.hexagonalarchitecture.domain.event.PublishedArticleEvent;
@@ -22,7 +22,7 @@ import java.util.List;
 public class ArticleService implements WriteArticle, ReadArticle, ManageArticle {
 
     private final ArticleOutput articleOutput;
-    private final NotifyArticleEvent articleNotification;
+    private final ArticleNotification articleNotification;
 
     @Override
     public Article createArticle(Article article) {

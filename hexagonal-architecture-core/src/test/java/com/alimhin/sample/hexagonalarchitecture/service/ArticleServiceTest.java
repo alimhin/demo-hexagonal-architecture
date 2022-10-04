@@ -1,7 +1,7 @@
 package com.alimhin.sample.hexagonalarchitecture.service;
 
 import com.alimhin.sample.hexagonalarchitecture.application.port.output.ArticleOutput;
-import com.alimhin.sample.hexagonalarchitecture.application.port.output.NotifyArticleEvent;
+import com.alimhin.sample.hexagonalarchitecture.application.port.output.ArticleNotification;
 import com.alimhin.sample.hexagonalarchitecture.domain.event.CreatedArticleEvent;
 import com.alimhin.sample.hexagonalarchitecture.domain.event.DraftArticleEvent;
 import com.alimhin.sample.hexagonalarchitecture.domain.event.PublishedArticleEvent;
@@ -47,7 +47,7 @@ class ArticleServiceTest {
     @Mock
     ArticleOutput articleOutput;
     @Mock
-    NotifyArticleEvent articleNotification;
+    ArticleNotification articleNotification;
 
     @InjectMocks
     private ArticleService service;
